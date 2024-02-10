@@ -31,3 +31,14 @@ print(obj.longestCommonPrefix(strs))
 6. If any character doesn't match or if the length of any string is less than i+1, return the longest common prefix string up to index i.
 7. If all characters match in all strings up to the length of the shortest string, return the longest common prefix string itself.
 '''
+# Method 2
+# class Solution:
+#     def longestCommonPrefix(self, strs: List[str]) -> str:
+#         if not strs:
+#             return ""
+#         min_str = min(strs)
+#         max_str = max(strs)
+#         for i, char in enumerate(min_str):
+#             if char!=max_str[i]:
+#                 return min_str[:i]
+#         return min_str
